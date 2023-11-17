@@ -32,15 +32,13 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                            fontSize: 40, fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.left,
-                      ),
+                    Text(
+                      "Login",
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
                     ),
                   ],
                 ),

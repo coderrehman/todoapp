@@ -35,7 +35,7 @@ class ForgetPassscreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 16, left: 16),
-                      child: TextField(
+                      child: TextField(     
                         controller: emailtextcont,
                         decoration: InputDecoration(
                           hintText: "New Password",
