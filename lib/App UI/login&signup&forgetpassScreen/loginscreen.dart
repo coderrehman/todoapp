@@ -14,17 +14,8 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Positioned(
-            top: 30,
-            child: Center(
-              child: Image(
-                image: AssetImage("assets/images/splashscreen/Vector.png"),
-                height: 200,
-                width: 200,
-              ),
-            ),
-          ),
           SizedBox(
             height: 10,
           ),

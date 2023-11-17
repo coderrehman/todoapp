@@ -87,7 +87,109 @@ class _IndexScreenState extends State<IndexScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+                backgroundColor: Color.fromRGBO(54, 54, 54, 1),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40))),
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 300,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 40, left: 25),
+                              child: Text(
+                                "Add Task",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.all(11.0),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.white, width: 2)),
+                              ),
+                            )),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 3, left: 20),
+                              child: Text(
+                                "Description",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Row(
+                                children: [
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Icon(
+                                      Icons.timer,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 30),
+                                    child: Icon(
+                                      Icons.bookmark,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 30),
+                                    child: Icon(
+                                      Icons.flag,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 165,
+                              ),
+                              child: Icon(
+                                Icons.send_sharp,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  );
+                });
+          },
           child: Icon(Icons.add),
           backgroundColor: Color.fromRGBO(134, 135, 231, 1),
         ),
@@ -135,7 +237,7 @@ class _IndexScreenState extends State<IndexScreen> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 78),
+                margin: EdgeInsets.only(left: 73),
                 child: Column(
                   children: [
                     Icon(
@@ -171,7 +273,7 @@ class _IndexScreenState extends State<IndexScreen> {
                     )
                   ],
                 ),
-              )
+              ),
             ]),
           ),
         ));

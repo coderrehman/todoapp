@@ -30,13 +30,13 @@ class Startscreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 20),
               child: Center(
                 child: Container(
-                  width: 300,
+                  width: 250,
                   child: Text(
                     "Please login to your account or create new account to continue",
                     textAlign: TextAlign.center,
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 215, 212, 212),
                         fontSize: 13,
                         fontWeight: FontWeight.w300),
                   ),
