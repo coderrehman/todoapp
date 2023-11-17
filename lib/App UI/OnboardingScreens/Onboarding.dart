@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/constants/onboardingconstants.dart';
 
+import '../StartScreen/startscreen.dart';
+
 class OnBoardingScreen extends StatefulWidget {
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
@@ -96,7 +98,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           shape: MaterialStatePropertyAll(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)))),
-                      onPressed: () {},
+                      onPressed: () {
+                        if (currentindex == onboardingconslist.length - 1) {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Startscreen()));
+                        }
+                        _controller.nextPage(
+                            duration: const Duration(milliseconds: 200),
+                            curve: Curves.linear);
+                      },
                       child: Text(currentindex == onboardingconslist.length - 1
                           ? "continue"
                           : "next"))),
